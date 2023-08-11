@@ -1,7 +1,7 @@
 ---
 general:
   buildTool: "mta"
-  collectTelemetryData: false # change by SB
+  #collectTelemetryData: false # change by SB
 service:
   buildToolVersion: "MBTJ11N16" #see SAP Continuous Integration and Delivery service for more build tool version options
 stages:
@@ -30,7 +30,6 @@ stages:
     cfCredentialsId: "deploy-to-cf"
     deployType: "standard"
     tmsUpload: false
-    collectTelemetryData: false
 steps:
   artifactPrepareVersion:
     versioningType: "cloud_noTag"
