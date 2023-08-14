@@ -3,12 +3,9 @@ const debug = require('debug')('srv:catalog-service');
 
 module.exports = cds.service.impl(async function () {
 
-    const NeoWs = await cds.connect.to('NearEarthObjectWebService');
 
     const {
             Sales
-            ,
-            Asteroids
           } = this.entities;
 
     this.after('READ', Sales, (each) => {
@@ -66,16 +63,6 @@ module.exports = cds.service.impl(async function () {
 
 
 
-    this.on('READ', Asteroids, async (req) => {
-        try {
-            const tx = NeoWs.transaction(req);
-            return await tx.send({
-                query: req.query
-            })
-        } catch (err) {
-            req.reject(err);
-        }
-    });
 
 
 

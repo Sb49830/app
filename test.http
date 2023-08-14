@@ -28,9 +28,6 @@ Authorization: Basic joe:
 GET http://localhost:4004/catalog/SessionInfo
 Authorization: Basic joe:
 ###
-GET http://localhost:4004/catalog/Asteroids
-Authorization: Basic joe:
-###
 GET http://localhost:4004/catalog/userInfo()
 Authorization: Basic joe:
 ###

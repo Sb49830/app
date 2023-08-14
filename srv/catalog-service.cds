@@ -13,7 +13,6 @@ using {CV_SALES, CV_SESSION_INFO} from '../db/data-model';
 
 
 
-using { NearEarthObjectWebService } from './external/NearEarthObjectWebService.csn';
 
 
 
@@ -64,10 +63,6 @@ service CatalogService @(path : '/catalog')
 
 
 
-    @readonly
-    entity Asteroids
-      @(restrict: [{ to: 'Viewer' }])
-      as projection on NearEarthObjectWebService.Feed;
 
 
 
